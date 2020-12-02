@@ -1,3 +1,7 @@
+import time
+
+start_time = time.time()
+
 f = open("input.txt", "r")
 raw_list = f.readlines()
 nums = []
@@ -20,3 +24,5 @@ for x in nums:
     y = 2020 - x
     if find_2(x, nums, y):
         break
+
+print("executed in %s ms" % int(1000 * (time.time() - start_time)))

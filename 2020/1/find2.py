@@ -1,3 +1,7 @@
+import time
+
+start_time = time.time()
+
 f = open("input.txt", "r")
 raw_list = f.readlines()
 nums = []
@@ -10,3 +14,5 @@ for x in nums:
         print("found: " + str(x) + "," + str(y))
         print("prod: " + str(x * y))
         break
+
+print("executed in %s ms" % int(1000 * (time.time() - start_time)))
