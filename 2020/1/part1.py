@@ -15,4 +15,5 @@ for x in nums:
         print("prod: " + str(x * y))
         break
 
-print("executed in %s ms" % int(1000 * (time.time() - start_time)))
+time = (time.time() - start_time)
+print("executed in %s ms or %s ns" % (round(1000 * time), round(1000000000 * time)))

@@ -1,3 +1,6 @@
+import time
+
+start_time = time.time()
 with open(f'input.txt') as f:
     ski_course = [line.strip() for line in f]
 
@@ -18,4 +21,6 @@ def count_trees(course, right, down):
 
 
 if __name__ == '__main__':
-    print(part_2(ski_course, {(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)}))
+    print("Day 3, Part 2:", part_2(ski_course, {(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)}))
+    time = (time.time() - start_time)
+    print("executed in %s ms or %s ns" % (round(1000 * time), round(1000000000 * time)))
